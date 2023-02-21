@@ -13,6 +13,8 @@
 <body>
     <section id="app">
         <div class="container py-5">
+            <input placeholder="Aggiungi una Todo" v-model="inputTask">
+            <button @click="addTask">Aggiungi</button>
             <ul>
                 <li v-for="(task,index) in tasks">
                     <span v-if="task.done === false">
