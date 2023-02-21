@@ -5,8 +5,6 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        message: 'Hello Vue!',
-
         tasks: [
     {
         text: "fare la spesa",
@@ -24,7 +22,12 @@ const { createApp } = Vue
         text: "comprare la frutta",
         done: true 
     }
-]
+    ]
       }
+      },
+    methods: {
+        removeTask: function(index){
+            this.tasks.splice(index, 1)
+        }
     }
 }).mount('#app')
